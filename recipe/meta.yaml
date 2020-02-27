@@ -1,21 +1,21 @@
 {% set name = "buildbot-worker" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 5408760fe1fb8f52ba029f78cdf33d1f050308491546a8702acc703dae132443
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 66ca92917ab12b915c00d2f0794b854496c2d9e50deb0b6198efb3cd94219eef
 
 build:
   number: 0
-  skip: True  # [py2k]
+  skip: true  # [py2k]
   entry_points:
     - buildbot-worker=buildbot_worker.scripts.runner:run
-    - buildbot_worker_windows_service=buildbot_worker.scripts.windows_service:HandleCommandLine  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+    - buildbot_worker_windows_service=buildbot_worker.scripts.windows_service: HandleCommandLine  # [win]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -44,12 +44,12 @@ test:
     - mock
 
 about:
-  home: "https://buildbot.net/"
-  license: "GNU General Public (GPL)"
-  license_family: "LGPL"
-  license_file: "COPYING"
-  summary: "Buildbot worker daemon"
-  doc_url: "https://docs.buildbot.net"
+  home: https://buildbot.net/
+  license: GNU General Public (GPL)
+  license_family: LGPL
+  license_file: COPYING
+  summary: Buildbot worker daemon
+  doc_url: https://docs.buildbot.net
 
 extra:
   recipe-maintainers:

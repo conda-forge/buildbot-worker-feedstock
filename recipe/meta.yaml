@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [py2k]
+  python: noarch
   entry_points:
     - buildbot-worker=buildbot_worker.scripts.runner:run
     - buildbot_worker_windows_service=buildbot_worker.scripts.windows_service: HandleCommandLine  # [win]
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >3.5
   run:
     - future
-    - python
+    - python >3.5
     - twisted >=17.9.0
 
 test:

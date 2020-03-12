@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  python: noarch
+  noarch: python
   entry_points:
     - buildbot-worker=buildbot_worker.scripts.runner:run
     - buildbot_worker_windows_service=buildbot_worker.scripts.windows_service: HandleCommandLine  # [win]

@@ -10,7 +10,7 @@ source:
   sha256: 7dfaab0dafc318c3dde647b01f9ec1a45b38892fd6b158d3b7724099145ceaa6
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - buildbot-worker=buildbot_worker.scripts.runner:run
     - buildbot_worker_windows_service=buildbot_worker.scripts.windows_service:HandleCommandLine  # [win]

@@ -11,10 +11,9 @@ source:
 
 build:
   number: 0
-  noarch: python
   entry_points:
     - buildbot-worker=buildbot_worker.scripts.runner:run
-    - buildbot_worker_windows_service=buildbot_worker.scripts.windows_service: HandleCommandLine  # [win]
+    - buildbot_worker_windows_service=buildbot_worker.scripts.windows_service:HandleCommandLine  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -40,13 +39,14 @@ test:
     - buildbot_worker.util
   commands:
     - buildbot-worker --help
+    - pip check
   requires:
-    - mock
+    - pip
 
 about:
   home: https://buildbot.net/
-  license: GNU General Public (GPL)
-  license_family: LGPL
+  license: GPL-2.0-or-later
+  license_family: GPL
   license_file: COPYING
   summary: Buildbot worker daemon
   doc_url: https://docs.buildbot.net

@@ -35,7 +35,6 @@ test:
     - buildbot_worker.util
   commands:
     - buildbot-worker --help
-    - buildbot_worker_windows_service start --help  # [win]
     - pip check
   requires:
     - pip

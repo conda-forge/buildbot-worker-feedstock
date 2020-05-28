@@ -32,10 +32,6 @@ test:
     - buildbot_worker.commands
     - buildbot_worker.monkeypatches
     - buildbot_worker.scripts
-    - buildbot_worker.test
-    - buildbot_worker.test.fake
-    - buildbot_worker.test.unit
-    - buildbot_worker.test.util
     - buildbot_worker.util
   commands:
     - buildbot-worker --help

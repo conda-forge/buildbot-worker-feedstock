@@ -30,7 +30,6 @@ test:
     - buildbot_worker
     - buildbot_worker.backports
     - buildbot_worker.commands
-    - buildbot_worker.monkeypatches
     - buildbot_worker.scripts
     - buildbot_worker.util
   commands:

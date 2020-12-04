@@ -5,11 +5,11 @@ Home: https://buildbot.net/
 
 Package license: GNU General Public (GPL)
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/buildbot-worker-feedstock/blob/master/LICENSE.txt)
 
 Summary: Buildbot worker daemon
 
-
+Documentation: https://docs.buildbot.net
 
 Current build status
 ====================

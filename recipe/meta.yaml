@@ -1,5 +1,5 @@
 {% set name = "buildbot-worker" %}
-{% set version = "3.7.0" %}
+{% set version = "3.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2dcf8536b7d72df7849c3a8d06cf51f7a8eda0510e086daf2d15862a2a7ff953
+  sha256: 7add11d29371b4be500a01d14f5feae6dfa16fa70b97a354dc0a30cd3fd60bdd
 
 build:
   number: 0
@@ -28,11 +28,6 @@ requirements:
 
 test:
   imports:
-    - buildbot_worker
-    - buildbot_worker.backports
-    - buildbot_worker.commands
-    - buildbot_worker.monkeypatches
-    - buildbot_worker.scripts
     - buildbot_worker.util
   commands:
     - buildbot-worker --help

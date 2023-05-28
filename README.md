@@ -1,11 +1,11 @@
-About buildbot-worker
-=====================
+About buildbot-worker-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/buildbot-worker-feedstock/blob/main/LICENSE.txt)
 
 Home: https://buildbot.net/
 
 Package license: GNU General Public (GPL)
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/buildbot-worker-feedstock/blob/main/LICENSE.txt)
 
 Summary: Buildbot worker daemon
 

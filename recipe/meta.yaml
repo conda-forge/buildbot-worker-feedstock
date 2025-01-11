@@ -10,7 +10,7 @@ source:
   sha256: 9610c0633b3340549dbb09a7fba208705233530e4e17e5082e1d1b6c8425be80
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - buildbot-worker=buildbot_worker.scripts.runner:run
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - python >3.5
+    - python {{ python_min }}
     - setuptools
   run:
     - future
-    - python >3.5
+    - python >={{ python_min }}
     - twisted >=17.9.0
 
 test:
@@ -34,6 +34,7 @@ test:
     - buildbot-worker --help
   requires:
     - mock
+    - python {{ python_min }}
 
 about:
   home: https://buildbot.net/
